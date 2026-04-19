@@ -12,9 +12,9 @@ int main() {
     cin >> N;
     for (int i = 0; i < N; i++) {
         cin >> x;
-        int angka = stoi(x);
 
-        if (angka >= 0 && angka < 100) {
+        if (x == "+" || x == "-" || x == "*" || x == "/") {
+            int angka = stoi(x);
             push(&s, angka);
 
         } else {
