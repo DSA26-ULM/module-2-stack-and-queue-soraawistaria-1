@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     Stack s;
     init(&s);
-    int N;
+    int N, hasil;
     string x;
 
     cin >> N;
@@ -17,14 +17,31 @@ int main() {
         if (angka >= 0 && angka < 100) {
             push(&s, angka);
 
-        } else if (x == "+") {
-            pop(&s);
-            
-        }
-    }
-    
-    for (int i = 0; i < N; i++) {
+        } else {
+            if (isEmpty(&s)) {
+                cout << "Stack masih kosong" << endl;
+                return 1;
+            }
+            int a = peek(&s); pop(&s);
 
-    }
+            if (isEmpty(&s)) {
+                cout << "Stack masih kosong" << endl;
+                return 1;
+            }
+            int b = peek(&s); pop(&s);
 
+            if (x == "+") hasil = a + b;
+            else if (x == "-") hasil = a - b;
+            else if (x == "*") hasil = a * b;
+            else if (x == "/") {
+                if (b == 0){
+                    cout << "Gabisa dibagi 0" << endl;
+                }
+                hasil = a / b;
+            }
+            push(&s, hasil);
+        }   
+    }
+    cout << peek(&s) << endl;
+    return 0;
 }
