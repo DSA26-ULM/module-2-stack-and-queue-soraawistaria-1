@@ -1,19 +1,24 @@
 #include "stack.h"
 #include <iostream>
 using namespace std;
+#include <string>
 
 int main() {
     Stack s;
-    int N, x;
+    init(&s);
+    int N;
+    string x;
 
     cin >> N;
     for (int i = 0; i < N; i++) {
         cin >> x;
+        int angka = stoi(x);
 
-        if (x >= 0 && x < 100) {
-            data.push(&s, x);
+        if (angka >= 0 && angka < 100) {
+            push(&s, angka);
+
         } else if (x == "+") {
-            data.pop(&s);
+            pop(&s);
             
         }
     }
