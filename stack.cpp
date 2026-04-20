@@ -7,7 +7,7 @@ bool isEmpty(const Stack* s) {
     return s->top == s->data;  //apakah kosong? (-1)
 }
 bool isFull(const Stack* s) {
-    return s->top == (s->data + MAX);  //apakah full? (99)
+    return s->top == (s->data + (MAX - 1));  //apakah full? (99)
 }
 void push(Stack* s, int value) {
     if (!isFull(s)) {  //kalau gak full
