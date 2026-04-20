@@ -11,8 +11,8 @@ bool isFull(const Stack* s) {
 }
 void push(Stack* s, int value) {
     if (!isFull(s)) {  //kalau gak full
-        *s->data = value;  //tambah elemen
         s->top++;  
+        *s->top = value;  //tambah elemen
     }
 }
 void pop(Stack* s) {
@@ -22,7 +22,7 @@ void pop(Stack* s) {
 }
 int peek(const Stack* s) {
     if (!isEmpty(s)) {  //kalau gak kosong
-        return *(s->data - 1);  //intip elemen terbaru
+        return *(s->top);  //intip elemen terbaru
     }
     return -1; 
 }

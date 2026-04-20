@@ -45,6 +45,6 @@ int main() {
         }   
     }
     cout << peek(&s) << endl;
-    cout << a << " " << b << " " << hasil << endl;
+    // cout << a << " " << b << " " << hasil << endl;
     return 0;
 }
