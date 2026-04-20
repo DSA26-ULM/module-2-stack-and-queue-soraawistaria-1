@@ -30,14 +30,14 @@ int main() {
             }
             b = peek(&s); pop(&s);
 
-            if (x == "+") hasil = a + b;
-            else if (x == "-") hasil = a - b;
-            else if (x == "*") hasil = a * b;
+            if (x == "+") hasil = b + a;
+            else if (x == "-") hasil = b - a;
+            else if (x == "*") hasil = b * a;
             else if (x == "/") {
                 if (b == 0){
                     cout << "Gabisa dibagi 0" << endl;
                 }
-                hasil = a / b;
+                hasil = b / a;
             }
             push(&s, hasil);
         }   
