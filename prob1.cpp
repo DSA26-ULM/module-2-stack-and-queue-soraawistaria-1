@@ -36,7 +36,7 @@ int main() {
             else if (x == "-") hasil = b - a;
             else if (x == "*") hasil = b * a;
             else if (x == "/") {
-                if (b == 0){
+                if (a == 0){
                     cout << "Gabisa dibagi 0" << endl;
                 }
                 hasil = b / a;
