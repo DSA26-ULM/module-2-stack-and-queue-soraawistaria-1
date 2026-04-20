@@ -22,13 +22,15 @@ int main() {
                 cout << "Stack masih kosong" << endl;
                 return 1;
             }
-            a = peek(&s); pop(&s);
+            a = peek(&s); 
+            pop(&s);
 
             if (isEmpty(&s)) {
                 cout << "Stack masih kosong" << endl;
                 return 1;
             }
-            b = peek(&s); pop(&s);
+            b = peek(&s); 
+            pop(&s);
 
             if (x == "+") hasil = b + a;
             else if (x == "-") hasil = b - a;
