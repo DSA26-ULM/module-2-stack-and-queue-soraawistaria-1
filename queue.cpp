@@ -6,7 +6,7 @@ void init(Queue* q) {
 }
 
 bool isEmpty(const Queue* q) {
-    return q->front == q->data;
+    return q->front == q->rear;
 }
 
 bool isFull(const Queue* q) {
