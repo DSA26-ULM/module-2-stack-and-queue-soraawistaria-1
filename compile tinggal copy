@@ -3,3 +3,6 @@ cd C:\Users\ASUS\Desktop\aya_project\cloneGithub\module-2-stack-and-queue-soraaw
 g++ -std=c++23 -Wall -Wextra -o prob1.exe prob1.cpp stack.cpp
 
 .\prob1.exe
+
+
+g++ -std=c++23 -Wall -Wextra -o prob2.exe prob2.cpp queue.cpp
