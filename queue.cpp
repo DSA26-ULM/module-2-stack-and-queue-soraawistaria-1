@@ -1,4 +1,5 @@
 #include "queue.h"
+#include <stdexcept>
 
 void init(Queue* q) {
     q->front = q->data;
@@ -38,12 +39,12 @@ int front(const Queue* q) {
     if(!isEmpty(q)){
         return *(q->front);
     }
-    return -1;
+    throw std::runtime_error("kyu kosong"); 
 }
 
 int back(const Queue* q) {
     if(!isEmpty(q)){
         return *(q->rear);
     }
-    return -1;
+    throw std::runtime_error("kyu kosong"); 
 }
